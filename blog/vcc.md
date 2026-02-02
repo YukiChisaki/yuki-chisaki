@@ -5,7 +5,7 @@ categories:
   - 不是常识
 description: ''
 createTime: 2026/01/28 20:11:39
-permalink: /blog/4j3btcnl/
+permalink: /blog/vcc/
 ---
 
 

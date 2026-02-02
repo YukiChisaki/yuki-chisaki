@@ -16,6 +16,8 @@ export default defineConfig({
   description: description,
   cleanUrls: false,
   lastUpdated: true,
+  srcDir: "./",
+  srcExclude: ["AGENTS.md",'**/README.md'],
   lang: "zh-CN",
   head: [
     [
@@ -89,24 +91,12 @@ export default defineConfig({
       next: "下一页",
     },
     nav: [
-      // { text: "首页", link: "/"},
-      { text: "博客", link: "/archives"},
-      // {
-      //   text: "指南",
-      //   link: "/guide/intro",
-      //   activeMatch: "/01.指南/",
-      // },
-      // { text: "配置", link: "/reference/config", activeMatch: "/10.配置/" },
-      // { text: "开发", link: "/develop/intro", activeMatch: "/15.主题开发/" },
-      {
-        text: "功能页",
-        items: [
-          { text: "归档页", link: "/archives" },
-          { text: "清单页", link: "/articleOverview" },
-          { text: "分类页", link: "/categories" },
-          { text: "标签页", link: "/tags" },
-        ],
-      },
+      { text: "首页", link: "/" },
+      { text: "文章", link: "/blog/vcc/", activeMatch: "/blog" },
+      { text: "归档页", link: "/archives" },
+      { text: "清单页", link: "/articleOverview" },
+      { text: "分类", link: "/categories" },
+      { text: "标签", link: "/tags" },
     ],
     socialLinks: [
       // {
@@ -117,11 +107,11 @@ export default defineConfig({
     search: {
       provider: "local",
     },
-    editLink: {
-      text: "在 GitHub 上编辑此页",
-      pattern:
-        "https://github.com/Kele-Bingtang/vitepress-theme-teek/edit/master/docs/:path",
-    },
+    // editLink: {
+    //   text: "在 GitHub 上编辑此页",
+    //   pattern:
+    //     "https://github.com/Kele-Bingtang/vitepress-theme-teek/edit/master/docs/:path",
+    // },
   },
   vite: {
     plugins: [llmstxt() as any],

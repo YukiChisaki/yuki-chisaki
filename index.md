@@ -33,19 +33,18 @@ onMounted(() => {
   heroTextDom.append(textDom);
 });
 </script>
-
+<!--
 <span id="hero-text" style="display: inline-block; position: relative">
   {{ frontmatter.hero.text}}
-</span>
+</span> -->
 
 <style>
 :root {
   --vp-home-hero-name-color: transparent;
-      --vp-home-hero-name-background: -webkit-linear-gradient(120deg, var(--rainbow-prev) 30%, var(--rainbow-next));
-    --vp-home-hero-image-background-image: linear-gradient(-45deg, var(--rainbow-prev) 30%, var(--rainbow-next));
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, var(--rainbow-prev) 30%, var(--rainbow-next));
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, var(--rainbow-prev) 30%, var(--rainbow-next));
   --vp-home-hero-image-filter: blur(44px);
-
-  
+  /* --vp-c-bg:#faf6f1 !important; */
 }
 
 /* 彩虹动画 */
@@ -85,18 +84,21 @@ onMounted(() => {
   text-align: center;
 }
 
-/* .VPHero .main {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
+.VPHero .main {
+  position: relative;
+} 
 
-/* .VPHero .name,
-.VPHero .text,
-.VPHero .tagline {
-  text-align: center;
-} */
+.VPHero .main::before {
+    content:"";
+    position: absolute;
+    z-index:-999;
+    width: 200px;
+    height: 200px;
+    background-image: var(--vp-home-hero-image-background-image);
+    filter: var(--vp-home-hero-image-filter);
+    transform: translate(0%, -45%);
+    border-radius: 50%;
+} 
 
 .VPHero .actions {
   display: flex;

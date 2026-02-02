@@ -6,14 +6,15 @@ export const teekConfig = defineTeekConfig({
   teekHome: false, // 是否开启博客首页
   vpHome: true, // 是否隐藏 VP 首页
   sidebarTrigger: true, // 是否开启侧边栏折叠功能
-  author: { name: "Teeker", link: "https://github.com/Kele-Bingtang" },
+  author: { name: "YukiChisaki", link: "https://github.com/YukiChisaki" },
+  // 页脚信息
   footerInfo: {
     theme: {
       name: `Theme By Teek@${version}`,
     },
     copyright: {
       createYear: 2025,
-      suffix: "Teek",
+      suffix: "Yuki Chisaki",
     },
   },
   codeBlock: {
