@@ -3,15 +3,15 @@ layout: home
 
 hero:
   name: Yuki Chisaki
-  # text: VitePress 主题
-  tagline: ✨Welcome!✨
+  # text: welcome
+  tagline: ✨静心得意 顺其自然✨
   actions:
     - theme: brand
-      text: 我的博客
+      text: 进入博客
       link: /archives
-    - theme: alt
-      text: 关于我
-      link: /about
+    # - theme: alt
+    #   text: 关于我
+    #   link: /about
   # image:
   #   src: /teek-logo-large.png
   #   alt: Teek
